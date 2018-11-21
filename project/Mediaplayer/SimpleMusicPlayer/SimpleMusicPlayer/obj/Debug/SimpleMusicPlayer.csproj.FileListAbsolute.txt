@@ -1,0 +1,15 @@
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\bin\Debug\SimpleMusicPlayer.exe.config
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\bin\Debug\SimpleMusicPlayer.exe
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\bin\Debug\SimpleMusicPlayer.pdb
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\SimpleMusicPlayer.csprojAssemblyReference.cache
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\MainWindow.g.cs
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\App.g.cs
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\SimpleMusicPlayer_MarkupCompile.cache
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\SimpleMusicPlayer_MarkupCompile.lref
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\MainWindow.baml
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\SimpleMusicPlayer.g.resources
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\SimpleMusicPlayer.Properties.Resources.resources
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\SimpleMusicPlayer.csproj.GenerateResource.cache
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\SimpleMusicPlayer.csproj.CoreCompileInputs.cache
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\SimpleMusicPlayer.exe
+C:\GitHub\project\Mediaplayer\SimpleMusicPlayer\SimpleMusicPlayer\obj\Debug\SimpleMusicPlayer.pdb
