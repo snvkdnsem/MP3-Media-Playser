@@ -5,47 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleMusicPlayer"
         mc:Ignorable="d"
-        Title="MainWi0ndow" Height="400" Width="600">
+        Title="MainWi0ndow" Height="400" Width="600" Background="Black">
     <Grid>
-        <MediaElement Height="150" Width="150" Margin="10,10,432,209"/>
-        <ListBox HorizontalAlignment="Left" Height="179" Margin="10,180,0,0" VerticalAlignment="Top" Width="572"/>
-        <Label Content="노래제목" HorizontalAlignment="Left" Height="25" Margin="165,10,0,0" VerticalAlignment="Top" Width="77"/>
-        <Label Content="가수" HorizontalAlignment="Left" Height="25" Margin="165,38,0,0" VerticalAlignment="Top" Width="77"/>
-        <Label Content="용량 및 사이즈" HorizontalAlignment="Left" Height="25" Margin="165,66,0,0" VerticalAlignment="Top" Width="77"/>
-        <Label Content="재생시간" HorizontalAlignment="Left" Height="25" Margin="165,94,0,0" VerticalAlignment="Top" Width="77"/>
-        
+        <MediaElement Name="media" MediaOpened="PlayMusic" MediaEnded="EndMusic"  Height="150" Width="150" Margin="10,10,432,209" LoadedBehavior="Manual" Volume="{Binding Path=Value, ElementName=volumeControl}"/>
+        <Image x:Name="albumart" Height="Auto" Width="Auto" Margin="10,10,432,209"/>
+        <ListBox x:Name="lstFiles" HorizontalAlignment="Left" Height="179" Margin="10,180,0,0" VerticalAlignment="Top" Width="572"/>
+        <Label x:Name="album" HorizontalAlignment="Left" Height="25" Margin="165,10,0,0" VerticalAlignment="Top" Width="77" Foreground="White"/>
+        <Label x:Name="title" HorizontalAlignment="Left" Height="25" Margin="165,38,0,0" VerticalAlignment="Top" Width="77" Foreground="White"/>
+        <Label x:Name="singer" HorizontalAlignment="Left" Height="25" Margin="165,66,0,0" VerticalAlignment="Top" Width="77" Foreground="White"/>
+        <Label x:Name="runTime" HorizontalAlignment="Left" Height="25" Margin="165,94,0,0" VerticalAlignment="Top" Width="77" Foreground="White"/>
+
         <!--Button 설정-->
-        <Button HorizontalAlignment="Left" Height="25" Margin="402,110,0,0" VerticalAlignment="Top" Width="25" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Height="30" Margin="377,94,0,0" VerticalAlignment="Top" Width="30" Background="Black" Click="Previous">
             <StackPanel Orientation="Horizontal">
-                <Image Name="btnimg" Source="backward.png"></Image>
+                <Image Name="btnimg" Source="image/previous.png"/>
             </StackPanel>
         </Button>
 
-        <Button HorizontalAlignment="Left" Height="25" Margin="432,110,0,0" VerticalAlignment="Top" Width="25" Click="Button_Click_1">
+        <Button HorizontalAlignment="Left" Height="30" Margin="412,94,0,0" VerticalAlignment="Top" Width="30" Background="Black" Click="Pause">
             <StackPanel Orientation="Horizontal">
-                <Image Name="btnimg1" Source="pause.png"></Image>
+                <Image Name="btnimg1" Source="image/pause.png"></Image>
             </StackPanel>
         </Button>
 
-        <Button HorizontalAlignment="Left" Height="25" Margin="462,110,0,0" VerticalAlignment="Top" Width="25" Click="Button_Click_2">
+        <Button HorizontalAlignment="Left" Height="30" Margin="447,94,0,0" VerticalAlignment="Top" Width="30" Background="Black" Click="Play">
             <StackPanel Orientation="Horizontal">
-                <Image Name="btnimg2" Source="stop.png"></Image>
+                <Image Name="btnimg2" Source="image/play.png"></Image>
             </StackPanel>
         </Button>
-        
-        <Button HorizontalAlignment="Left" Height="25" Margin="492,110,0,0" VerticalAlignment="Top" Width="25" Click="Button_Click_3">
+
+        <Button HorizontalAlignment="Left" Height="30" Margin="482,94,0,0" VerticalAlignment="Top" Width="30" Background="Black" Click="Stop">
             <StackPanel Orientation="Horizontal">
-                <Image Name="btnimg3" Source="fastforward.png"></Image>
+                <Image Name="btnimg3" Source="image/stop.png"></Image>
             </StackPanel>
         </Button>
-        
-        <Button Content="Button" HorizontalAlignment="Left" Height="25" Margin="522,110,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="25" Margin="552,110,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button Content="볼륨/음소거" HorizontalAlignment="Left" Height="20" Margin="462,147,0,0" VerticalAlignment="Top" Width="23" FontSize="6"/>
-        <Label Content="재생된시간" HorizontalAlignment="Left" Height="17" Margin="246,147,0,0" VerticalAlignment="Top" Width="41" FontSize="6"/>
-        <Slider HorizontalAlignment="Left" Height="25" Margin="292,147,0,0" VerticalAlignment="Top" Width="115"/>
-        <Label Content="남은시간" HorizontalAlignment="Left" Height="17" Margin="407,147,0,0" VerticalAlignment="Top" Width="41" FontSize="6"/>
-        <Slider HorizontalAlignment="Left" Height="25" Margin="490,147,0,0" VerticalAlignment="Top" Width="92"/>
-        
+
+        <Button HorizontalAlignment="Left" Height="30" Margin="517,94,0,0" VerticalAlignment="Top" Width="30" Background="Black" Click="Next">
+            <StackPanel Orientation="Horizontal">
+                <Image Name="btnimg4" Source="image/next.png"></Image>
+            </StackPanel>
+        </Button>
+
+        <Button HorizontalAlignment="Left" Height="30" Margin="552,94,0,0" VerticalAlignment="Top" Width="30" Background="Black" Click="Repeat">
+            <StackPanel Orientation="Horizontal">
+                <Image Name="btnimg5" Source="image/repeat.png"></Image>
+            </StackPanel>
+        </Button>
+
+        <Button HorizontalAlignment="Left" Height="20" Margin="462,143,0,0" VerticalAlignment="Top" Width="23" Background="Black" Click="VolumeOnOff">
+            <StackPanel Orientation="Horizontal">
+                <Image Name="btnimg6" Source="image/volume.png"></Image>
+            </StackPanel>
+        </Button>
+
+        <Label Name="playTime" HorizontalAlignment="Left" Height="17" Margin="246,147,0,0" VerticalAlignment="Top" Width="41" FontSize="6" Foreground="White"/>
+        <Slider Name="musicSlider" HorizontalAlignment="Left" Height="25" Margin="292,147,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label Content="남은시간" HorizontalAlignment="Left" Height="17" Margin="407,147,0,0" VerticalAlignment="Top" Width="41" FontSize="6" Foreground="White"/>
+        <Slider Name="volumeControl" Value="0.5" HorizontalAlignment="Left" Height="25" Margin="490,147,0,0" VerticalAlignment="Top" Width="92" Minimum="0" Maximum="1"/>
+        <Button Content="파일추가" HorizontalAlignment="Left" Margin="507,10,0,0" VerticalAlignment="Top" Width="75" Click="FileAdd"/>
+
     </Grid>
 </Window>
